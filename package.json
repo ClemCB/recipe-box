@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-preset-stage-0": "^6.24.1",
+    "jest-cli": "20.0.4",
+    "jsdom": "^11.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17",
-    "jest-cli": "^22.0.4"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
